@@ -37,15 +37,8 @@ input[type="submit"] {
 	background: #494F7F;
 }
 
-button {
-	display: block;
-	margin: 20px auto;
-	width: 80%;
-	height: 50px;
-	border: none;
-	font-size: 20px;
-	background: #494F7F;
-	color: #fff;
+input[type="submit"]:hover {
+	color: #000;
 }
 
 a {
@@ -57,7 +50,7 @@ a {
 }
 
 a:hover {
-	color: ;
+	color: #000;
 }
 
 
