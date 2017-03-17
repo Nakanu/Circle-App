@@ -83,6 +83,7 @@ a:hover {
 
 span {
 	color: #fff;
+	font-weight: 300;
 }
 
 hr {
@@ -110,3 +111,19 @@ hr {
 	max-width: 200px;
 	margin: 0 auto;
 }
+
+/* Social Media icon */
+.media-icon {
+	padding-right: 5px;
+}
+.media-icon img {
+	width: 35px;
+	height: 35px;
+	border: none;
+	margin-top: 5px;
+}
+
+
+
+
+
