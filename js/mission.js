@@ -14,3 +14,4 @@ document.getElementById("new-request-btn").onclick = function() { showSignUpForm
 function showSignUpForm() {
 	document.getElementById("add-request").style.display = "block";
 }
+
