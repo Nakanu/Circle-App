@@ -15,7 +15,7 @@
       <!-- <input type="text" id="addRequest"/> -->
       <button class="btn" id="new-request-btn">New Request</button>
       <button class="btn" id="log-out-btn">Log out</button>
-      <p>Current User:</p><p class="userNameb">Circle</p>
+      <p>Current User:</p><p id="userName">Circle</p>
     </div>
   </div>
   
@@ -30,8 +30,8 @@
   <!-- Add Request Form --> 
     <div id="add-request" class="modal">
       <!-- Form element -->
-      <span onclick="document.getElementById('add-request').style.display='none'" class="close" title="Close Modal">×</span>
-      <form class="modal-content animate">
+      <span onclick="document.getElementById('add-request').style.display='none'" class="close" title="Close Modal">×</span>  
+      <div class="modal-content animate">
           <div class="container">
             <label class="request_lbl"><b>Post Type</b></label>
             <label>
@@ -196,10 +196,10 @@
 
             <div class="clearfix">
               <button type="button" onclick="document.getElementById('add-request').style.display='none'" class="cancel_btn">Cancel</button>
-              <button type="submit" class="add_request_btn">Post request</button>
+              <button type="submit" id="post-request" class="add_request_btn">Post request</button>
             </div>
           </div>
-      </form>
+      </div>
     </div>
   
   <footer>Circle Mutual help platform @2017</footer>
