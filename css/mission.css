@@ -33,14 +33,14 @@ input[type="text"] {
   outline: none;
 }
 
-#new-request-btn {
+.btn{
   background: #00ab90;
   border: 2px solid #00ab90;
   border-radius: 15px;
   height: 30px;
 }
 
-#new-request-btn:hover {
+.btn:hover {
   color: #fff;
 }
 
@@ -192,6 +192,11 @@ textarea {
 
 fieldset {
   margin-bottom: 10px;
+}
+
+span {
+  font-size: 12px;
+  font-weight: normal;
 }
 
 
