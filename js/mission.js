@@ -40,7 +40,9 @@ const postRequest = () => {
 							'</a>';
 	el.appendChild(elChild);
 
-	hideSignUpForm();
+	document.getElementById('summary').value = "";
+	document.getElementById('request-info').value = "";
 
+	hideSignUpForm();
 }
 

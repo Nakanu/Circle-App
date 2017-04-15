@@ -25,5 +25,9 @@ function signUp() {
 	}else{
 		//TODO
 	}
+
+	document.getElementById('userName').value = "";
+	document.getElementById('passWord').value = "";
+	document.getElementById('rePassword').value = "";
 }
 
