@@ -1,0 +1,76 @@
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/mission.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+</head>
+<body>
+  <div>
+    <h1>Unfinished Request</h1>
+    <!-- <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" id="random">Click here for random article</a> -->
+    <div id="form">
+      <!-- <input type="text" id="addRequest"/> -->
+      <button class="btn" id="new-request-btn">New Request</button>
+      <button class="btn" id="addCommentBtn">Add comment</button>
+      <p>Current User:</p><p id="userName">Circle</p>
+    </div>
+  </div>
+  
+  <div>
+    <ul id="searchResult">
+     <!--  <li><a href="#">Request 1<p>Here is the request information</p><span>Post by:</span><span class="requester">Circle</span></a></li> -->
+    </ul>
+  </div>
+
+  <!-- Add Request Form --> 
+  <form id="add-request" class="modal">
+    <!-- Form element -->
+    <span onclick="document.getElementById('add-request').style.display='none'" class="close" title="Close Modal">×</span>  
+    <div class="modal-content animate">
+        <div class="container">
+          <label class="request_lbl"><b>Post Type</b></label>
+          <label>
+            <input type="radio" name="urgentType" value="urgent" required> Urgent
+          </label>
+          
+          <label>
+            <input type="radio" name="urgentType" value="no_rush" required> No rush
+          </label>
+          
+
+          <br>
+          <br>
+          <label class="request_lbl"><b>Summary</b></label>
+          <input type="text" placeholder="Enter a one line summary" id="summary" required>
+
+          <br>
+          <br>
+          <label><b>Start date:</b></label>
+          <input type="date" name="bday" min="2017-01-01" id="startDate"><br><br>
+          <label><b>End date:</b></label>
+          <input type="date" name="bday" max="2018-01-01" id="endDate"><br>
+        
+          <br>
+          <label class="request_lbl"><b>Detail</b></label>
+          <textarea id="request-info" name="detail" form="add-request"></textarea>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('add-request').style.display='none'" class="cancel_btn">Cancel</button>
+            <button type="button" id="post-request" class="add_request_btn" onclick = "Post_request">Post request</button>
+          </div>
+        </div>
+    </div>
+  </form>
+  
+  <footer>Circle Mutual help platform @2017</footer>
+
+  <!-- JavaScript --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/mission.js"></script>
+</body>
+</html>
