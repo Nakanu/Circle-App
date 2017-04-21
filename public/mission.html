@@ -16,193 +16,56 @@
     <div id="form">
       <!-- <input type="text" id="addRequest"/> -->
       <button class="btn" id="new-request-btn">New Request</button>
-      <button class="btn" id="log-out-btn">Log out</button>
+      <button class="btn" id="addCommentBtn">Add comment</button>
       <p>Current User:</p><p id="userName">Circle</p>
     </div>
   </div>
   
   <div>
     <ul id="searchResult">
-     <!--  <li><a href="#">Request 1<p>Here is the request information</p><span>Post by:</span><span class="requester">Circle</span></a></li>
-      <li><a href="#">Request 2<p>Here is the request information</p><span>Post by:</span><span class="requester">Circle</span></a></li>
-      <li><a href="#">Request 3<p>Here is the request information</p><span>Post by:</span><span class="requester">Circle</span></a></li> -->
+     <!--  <li><a href="#">Request 1<p>Here is the request information</p><span>Post by:</span><span class="requester">Circle</span></a></li> -->
     </ul>
   </div>
 
   <!-- Add Request Form --> 
-    <form id="add-request" class="modal">
-      <!-- Form element -->
-      <span onclick="document.getElementById('add-request').style.display='none'" class="close" title="Close Modal">×</span>  
-      <div class="modal-content animate">
-          <div class="container">
-            <label class="request_lbl"><b>Post Type</b></label>
-            <label>
-              <input type="radio" name="urgentType" value="urgent" required> Urgent
-            </label>
-            
-            <label>
-              <input type="radio" name="urgentType" value="no_rush" required> No rush
-            </label>
-            
-
-            <br>
-            <br>
-            <label class="request_lbl"><b>Summary</b></label>
-            <input type="text" placeholder="Enter a one line summary" id="summary" required>
-
-            <br>
-            <br>
-            <fieldset class="date"> 
-              <legend>Start Date </legend> 
-              <label for="month_start">Month</label> 
-              <select id="month_start" 
-                      name="month_start" /> 
-                <option>January</option>       
-                <option>February</option>       
-                <option>March</option>       
-                <option>April</option>       
-                <option>May</option>       
-                <option>June</option>       
-                <option>July</option>       
-                <option>August</option>       
-                <option>September</option>       
-                <option>October</option>       
-                <option>November</option>       
-                <option>December</option>       
-              </select> -
-              <label for="day_start">Day</label> 
-              <select id="day_start" 
-                      name="day_start" /> 
-                <option>1</option>       
-                <option>2</option>       
-                <option>3</option>       
-                <option>4</option>       
-                <option>5</option>       
-                <option>6</option>       
-                <option>7</option>       
-                <option>8</option>       
-                <option>9</option>       
-                <option>10</option>       
-                <option>11</option>       
-                <option>12</option>       
-                <option>13</option>       
-                <option>14</option>       
-                <option>15</option>       
-                <option>16</option>       
-                <option>17</option>       
-                <option>18</option>       
-                <option>19</option>       
-                <option>20</option>       
-                <option>21</option>       
-                <option>22</option>       
-                <option>23</option>       
-                <option>24</option>       
-                <option>25</option>       
-                <option>26</option>       
-                <option>27</option>       
-                <option>28</option>       
-                <option>29</option>       
-                <option>30</option>       
-                <option>31</option>       
-              </select> - 
-              <label for="year_start">Year</label> 
-              <select id="year_start" 
-                     name="year_start" /> 
-                <option>2017</option>       
-                <option>2018</option>       
-                <option>2019</option>       
-                <option>2020</option>       
-                <option>2021</option>       
-                <option>2022</option>       
-                <option>2023</option>       
-                <option>2024</option>       
-                <option>2025</option>       
-                <option>2026</option>       
-              </select> 
-              <!-- <span class="inst">(Month-Day-Year)</span>  -->
-            </fieldset> 
-
-            <fieldset class="date"> 
-              <legend>End Date </legend> 
-              <label for="month_end">Month</label> 
-              <select id="month_end" 
-                      name="month_end" /> 
-                <option>January</option>       
-                <option>February</option>       
-                <option>March</option>       
-                <option>April</option>       
-                <option>May</option>       
-                <option>June</option>       
-                <option>July</option>       
-                <option>August</option>       
-                <option>September</option>       
-                <option>October</option>       
-                <option>November</option>       
-                <option>December</option>       
-              </select> - 
-              <label for="day_end">Day</label> 
-              <select id="day_end" 
-                      name="day_end" /> 
-                <option>1</option>       
-                <option>2</option>       
-                <option>3</option>       
-                <option>4</option>       
-                <option>5</option>       
-                <option>6</option>       
-                <option>7</option>       
-                <option>8</option>       
-                <option>9</option>       
-                <option>10</option>       
-                <option>11</option>       
-                <option>12</option>       
-                <option>13</option>       
-                <option>14</option>       
-                <option>15</option>       
-                <option>16</option>       
-                <option>17</option>       
-                <option>18</option>       
-                <option>19</option>       
-                <option>20</option>       
-                <option>21</option>       
-                <option>22</option>       
-                <option>23</option>       
-                <option>24</option>       
-                <option>25</option>       
-                <option>26</option>       
-                <option>27</option>       
-                <option>28</option>       
-                <option>29</option>       
-                <option>30</option>       
-                <option>31</option>       
-              </select> - 
-              <label for="year_end">Year</label> 
-              <select id="year_end" 
-                     name="year_end" /> 
-                <option>2017</option>       
-                <option>2018</option>       
-                <option>2019</option>       
-                <option>2020</option>       
-                <option>2021</option>       
-                <option>2022</option>       
-                <option>2023</option>       
-                <option>2024</option>       
-                <option>2025</option>       
-                <option>2026</option>       
-              </select> 
-              <!-- <span class="inst">(Month-Day-Year)</span>  -->
-            </fieldset> 
+  <form id="add-request" class="modal">
+    <!-- Form element -->
+    <span onclick="document.getElementById('add-request').style.display='none'" class="close" title="Close Modal">×</span>  
+    <div class="modal-content animate">
+        <div class="container">
+          <label class="request_lbl"><b>Post Type</b></label>
+          <label>
+            <input type="radio" name="urgentType" value="urgent" required> Urgent
+          </label>
           
-            <br>
-            <label class="request_lbl"><b>Detail</b></label>
-            <textarea id="request-info" name="detail" form="add-request"></textarea>
+          <label>
+            <input type="radio" name="urgentType" value="no_rush" required> No rush
+          </label>
+          
 
-            <div class="clearfix">
-              <button type="button" onclick="document.getElementById('add-request').style.display='none'" class="cancel_btn">Cancel</button>
-              <button type="button" id="post-request" class="add_request_btn" onclick = "Post_request">Post request</button>
-            </div>
+          <br>
+          <br>
+          <label class="request_lbl"><b>Summary</b></label>
+          <input type="text" placeholder="Enter a one line summary" id="summary" required>
+
+          <br>
+          <br>
+          <label><b>Start date:</b></label>
+          <input type="date" name="bday" min="2017-01-01" id="startDate"><br><br>
+          <label><b>End date:</b></label>
+          <input type="date" name="bday" max="2018-01-01" id="endDate"><br>
+        
+          <br>
+          <label class="request_lbl"><b>Detail</b></label>
+          <textarea id="request-info" name="detail" form="add-request"></textarea>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('add-request').style.display='none'" class="cancel_btn">Cancel</button>
+            <button type="button" id="post-request" class="add_request_btn" onclick = "Post_request">Post request</button>
           </div>
-      </div>
-    </form>
+        </div>
+    </div>
+  </form>
   
   <footer>Circle Mutual help platform @2017</footer>
 
